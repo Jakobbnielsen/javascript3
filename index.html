@@ -41,25 +41,8 @@ function SetNote(p_note, id) {
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 function getNote(id, obj) {
   currentId = obj.id
-=======
->>>>>>> parent of 610e620... delete note
-=======
->>>>>>> parent of 610e620... delete note
-=======
->>>>>>> parent of 610e620... delete note
-function getNote(p_note, id, obj) {
->>>>>>> 610e62037cc3537250e96f528746d7cc72deca5b
-=======
-function getNote(id, obj) {
-  currentId = obj.id
->>>>>>> parent of 3d8a170... Merge branch 'master' of https://github.com/Jakobbnielsen/javascript3
   var note = localStorage.getItem(obj.id);
   if(note !=null) {
     document.getElementById(id).value=note;

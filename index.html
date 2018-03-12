@@ -41,15 +41,10 @@ function SetNote(p_note, id) {
     var noteArrayStringBackToArray = JSON.parse(noteArrayString)
 }
 
-<<<<<<< HEAD
+
 function getNote(id, obj) {
-<<<<<<< HEAD:index2.html
-=======
   currentId = obj.id
->>>>>>> parent of 3d8a170... Merge branch 'master' of https://github.com/Jakobbnielsen/javascript3:index.html
-=======
 function getNote(p_note, id, obj) {
->>>>>>> parent of ff793aa... asd
   var note = localStorage.getItem(obj.id);
   if(note !=null) {
     document.getElementById(id).value=note;
@@ -58,7 +53,7 @@ function getNote(p_note, id, obj) {
   }
 currentId = obj.id
 }
-<<<<<<< HEAD
+
 var noteArrayString = localStorage.getItem("list");
   var noteArrayStringBackToArray = JSON.parse(noteArrayString);
   for (var i = 0; i < noteArrayStringBackToArray.length; i++);
@@ -66,8 +61,7 @@ var noteArrayString = localStorage.getItem("list");
     document.getElementById("list").innerHTML += noteArrayStringBackToArray[i];
   }
 
-=======
->>>>>>> parent of ff793aa... asd
+
 
 var currentMax = Number(localStorage.getItem('currentMax'));
 if (currentMax==null)

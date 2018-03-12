@@ -9,20 +9,11 @@
 <textarea id="text1" cols="30" rows="10"></textarea>
 <aside>
   <ul>
-<<<<<<< HEAD
-  <li><a href="#">første</a></li>
-  <li><a href="#">første</a></li>
-  <li><a href="#">første</a></li>
-  <li><a href="#">første</a></li>
-  <li><a href="#">første</a></li>
-=======
-  <li><a href="#">The first note</a></li>
-  <li><a href="#">Second note</a></li>
-  <li><a href="#">This is a third note</a></li>
-  <li><a href="#">Note number 4</a></li>
-  <li><a href="#">5 notes yeah :D</a></li>
-  <li><a href="#">Best note editor</a></li>
->>>>>>> 90be2d985fa1ee699def37bc595bbf6058f3bca7
+  <li><a href="#" id="note1"><span onclick="SetNote('note1', 'text1')">The first note</span></a></li>
+  <li><a href="#" id="note2"><span onclick="SetNote('note2', 'text1')">The first note</span></a></li>
+    <li><a href="#" id="note3"><span onclick="SetNote('note3', 'text1')">The first note</span></a></li>
+      <li><a href="#" id="note4"><span onclick="SetNote('note4', 'text1')">The first note</span></a></li>
+        <li><a href="#" id="note5"><span onclick="SetNote('note5', 'text1')">The first note</span></a></li>
 
   </ul>
 </aside>
@@ -32,7 +23,13 @@
 
 
 <script>
-function SetNote("p_note") {
-  Document.getElementById("text1").Value="p_note"
+
+function SetNote(p_note, id) {
+  //document.getElementById(id).value=p_note;
+  var saveNote = document.getElementById(id).value;
+    localStorage.setItem(p_note, saveNote);
+
+
 }
+
 </script>

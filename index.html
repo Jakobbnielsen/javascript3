@@ -49,21 +49,6 @@ function SetNote(p_note, id) {
 function getNote(id, obj) {
   currentId = obj.id
 =======
-function deleteNote(p_note, id) {
-  var saveNote = document.getElementById(id).value;
-    localStorage.removeItem(p_note, saveNote);
-    if(p_note == null)
-    {
-      currentMax -= 1;
-      localStorage.removeItem('currentMax', currentMax);
-    noteArray.push('<li><a href="#" id="note'-currentMax-'"><span id="spannote'-currentMax-'" onclick="getNote(\'text1\', this)">note '-currentMax-'</span></a></li>');
-     document.getElementById("list").innerHTML-= noteArray[noteArray.length+1];
-    }
-}
-
-=======
->>>>>>> parent of 610e620... delete note
-=======
 >>>>>>> parent of 610e620... delete note
 =======
 >>>>>>> parent of 610e620... delete note
@@ -71,6 +56,10 @@ function deleteNote(p_note, id) {
 >>>>>>> parent of 610e620... delete note
 function getNote(p_note, id, obj) {
 >>>>>>> 610e62037cc3537250e96f528746d7cc72deca5b
+=======
+function getNote(id, obj) {
+  currentId = obj.id
+>>>>>>> parent of 3d8a170... Merge branch 'master' of https://github.com/Jakobbnielsen/javascript3
   var note = localStorage.getItem(obj.id);
   if(note !=null) {
     document.getElementById(id).value=note;

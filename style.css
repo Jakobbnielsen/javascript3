@@ -9,13 +9,12 @@
   float: left;
   font-size: 20px;
   width: 85%;
-  height: 600px;
+  height: 800px;
 }
 
 aside{
-  padding-left: 20px;
   float: left;
-  width: 10%;
+  width: 14.8%;
 }
 
 aside a{
@@ -26,5 +25,34 @@ aside a{
 aside ul li{
   text-decoration: none;
   list-style-type: none;
-  padding: 10px 0 10px 0;
+  padding: 15px 20px 15px 20px;
+  border-bottom: 1px solid #b3ba35;
+}
+
+aside ul li:hover{
+  background-color: #f1f07a;
+}
+
+.menu{
+  float: left;
+  width: 100%;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.menu ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #000;
 }

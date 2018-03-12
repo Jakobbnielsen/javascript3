@@ -11,7 +11,7 @@
     </div>
       <ul class="menu">
         <li><a href="#"><span onclick="SetNote(null, 'text1')">New note</span></a></li>
-        <li><a href="#"><span onclick="deleteNote(null, 'text1')">Delete note</span></a></li>
+        <li><a href="#">Delete note</a></li>
         <li><a href="#"><span onclick="SetNote(currentId, 'text1')">Save note</span></a></li>
       </ul>
 <textarea id="text1" cols="30" rows="10" placeholder="Title"></textarea>
@@ -42,6 +42,7 @@ function SetNote(p_note, id) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function getNote(id, obj) {
   currentId = obj.id
 =======
@@ -57,6 +58,8 @@ function deleteNote(p_note, id) {
     }
 }
 
+=======
+>>>>>>> parent of 610e620... delete note
 function getNote(p_note, id, obj) {
 >>>>>>> 610e62037cc3537250e96f528746d7cc72deca5b
   var note = localStorage.getItem(obj.id);

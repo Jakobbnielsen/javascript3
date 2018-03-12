@@ -9,16 +9,16 @@
       <ul class="menu">
         <li><a href="#">New note</a></li>
         <li><a href="#">Delete note</a></li>
-        <li><a href="#">Save note</a></li>
+        <li><a href="#"><span onclick="SetNote(currentId, 'text1')">Save note</span></a></li>
       </ul>
 <textarea id="text1" cols="30" rows="10" placeholder="Title"></textarea>
 <aside>
-  <ul>
-  <li><a href="#" id="note1"><span onclick="SetNote('note1', 'text1')">The first note</span></a></li>
-  <li><a href="#" id="note2"><span onclick="SetNote('note2', 'text1')">The first note</span></a></li>
-    <li><a href="#" id="note3"><span onclick="SetNote('note3', 'text1')">The first note</span></a></li>
-      <li><a href="#" id="note4"><span onclick="SetNote('note4', 'text1')">The first note</span></a></li>
-        <li><a href="#" id="note5"><span onclick="SetNote('note5', 'text1')">The first note</span></a></li>
+  <ul id="list">
+  <li><a href="#" id="note1"><span id="spannote1" onclick="getNote('text1', this)">The first note</span></a></li>
+  <li><a href="#" id="note2"><span id="spannote2" onclick="getNote('text1', this)">The first note</span></a></li>
+    <li><a href="#" id="note3"><span id="spannote3" onclick="getNote('text1', this)">The first note</span></a></li>
+      <li><a href="#" id="note4"><span id="spannote4" onclick="getNote('text1', this)">The first note</span></a></li>
+        <li><a href="#" id="note5"><span id="spannote5" onclick="getNote('text1', this)">The first note</span></a></li>
 
   </ul>
 </aside>
@@ -27,13 +27,20 @@
 
 
 <script>
-
 function SetNote(p_note, id) {
   //document.getElementById(id).value=p_note;
   var saveNote = document.getElementById(id).value;
     localStorage.setItem(p_note, saveNote);
-
-
 }
 
+function getNote(p_note, id, obj) {
+  var note = localStorage.getItem(obj.id);
+  if(note !=null) {
+    document.getElementById(id).value=note;
+  } else {
+    document.getElementById(id).value="noten er tom";
+  }
+currentId = obj.id
+}
+var currentId;
 </script>

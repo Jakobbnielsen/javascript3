@@ -1,8 +1,26 @@
 *{
   background-color: #f4e242;
+  font-family: Arial, sans-serif;
 }
 
 #text{
+  float: left;
   width: 600px;
   height: 600px;
+}
+
+aside{
+  float: left;
+  width: 200px;
+}
+
+aside a{
+  text-decoration: none;
+  color: #000;
+}
+
+aside ul li{
+  text-decoration: none;
+  list-style-type: none;
+  padding: 10px 0 10px 0;
 }

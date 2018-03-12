@@ -9,19 +9,48 @@
       <ul class="menu">
         <li><a href="#">New note</a></li>
         <li><a href="#">Delete note</a></li>
-        <li><a href="#">Save note</a></li>
+        <li><a href="#"><span onclick="SetNote(currentId, 'text1')">Save note</span></a></li>
       </ul>
 <textarea id="text1" cols="30" rows="10" placeholder="Title"></textarea>
 <aside>
-  <ul>
-  <li><a href="#">The first note</a></li>
-  <li><a href="#">Second note</a></li>
-  <li><a href="#">This is a third note</a></li>
-  <li><a href="#">Note number 4</a></li>
-  <li><a href="#">5 notes yeah :D</a></li>
-  <li><a href="#">Best note editor</a></li>
+  <ul id="list">
+  <li><a href="#" id="note1"><span id="spannote1" onclick="getNote('text1', this)">The first note</span></a></li>
+  <li><a href="#" id="note2"><span id="spannote2" onclick="getNote('text1', this)">The first note</span></a></li>
+    <li><a href="#" id="note3"><span id="spannote3" onclick="getNote('text1', this)">The first note</span></a></li>
+      <li><a href="#" id="note4"><span id="spannote4" onclick="getNote('text1', this)">The first note</span></a></li>
+        <li><a href="#" id="note5"><span id="spannote5" onclick="getNote('text1', this)">The first note</span></a></li>
 
   </ul>
 </aside>
   </body>
 </html>
+<<<<<<< HEAD
+=======
+
+
+<script>
+function SetNote(p_note, id) {
+  //document.getElementById(id).value=p_note;
+  var saveNote = document.getElementById(id).value;
+    localStorage.setItem(p_note, saveNote);
+}
+
+function getNote(p_note, id, obj) {
+  var note = localStorage.getItem(obj.id);
+  if(note !=null) {
+    document.getElementById(id).value=note;
+  } else {
+    document.getElementById(id).value="noten er tom";
+  }
+currentId = obj.id
+}
+var currentId;
+var noteArray;
+function initialize(){
+  noteArray = new array();
+noteArray.push("<li><a>test</a></li>")
+document.getElementById("list").innerHTML+= noteArray[0]
+}
+
+</script>
+>>>>>>> ee002cdcc8c11cacfef7829bd4d9019a79794cb8

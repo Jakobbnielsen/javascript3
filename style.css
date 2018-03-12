@@ -12,6 +12,10 @@
   height: 800px;
 }
 
+.logo{
+  text-align: center;
+}
+
 aside{
   float: left;
   width: 14.8%;
@@ -47,15 +51,16 @@ aside ul li:hover{
 
 .menu ul{
   list-style-type: none;
+  float: left;
   margin: 0;
   padding: 0;
 }
 
 .menu li {
-    float: left;
+  float: left;
 }
 
-.menu ul li:hover {
+.menu li:hover {
     background-color: #fdffbc;
 }
 

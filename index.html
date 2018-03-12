@@ -21,7 +21,7 @@
 
 
 <script>
-
+//localStorage.clear();
 function SetNote(p_note, id) {
   var saveNote = document.getElementById(id).value;
     localStorage.setItem(p_note, saveNote);
@@ -29,7 +29,7 @@ function SetNote(p_note, id) {
     {
       currentMax += 1;
       localStorage.setItem('currentMax', currentMax);
-    noteArray.push('<li><a href="#" id="note'+currentMax+'"><span id="spannote'+currentMax+'" onclick="getNote(\'text1\', this)">The first note</span></a></li>');
+    noteArray.push('<li><a href="#" id="note'+currentMax+'"><span id="spannote'+currentMax+'" onclick="getNote(\'text1\', this)">Note'+currentMax+'</span></a></li>');
      document.getElementById("list").innerHTML+= noteArray[noteArray.length-1];
     }
     var noteArrayString = JSON.stringify(noteArray);

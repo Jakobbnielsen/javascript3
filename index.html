@@ -51,7 +51,7 @@ function getNote(id, obj) {
 }
 var noteArrayString = localStorage.getItem("list");
   var noteArrayStringBackToArray = JSON.parse(noteArrayString);
-  for (var i = 0; i < noteArrayStringBackToArray.length; i++)
+  for (var i = 0; i < noteArrayStringBackToArray.length; i++);
   {
     document.getElementById("list").innerHTML += noteArrayStringBackToArray[i];
   }

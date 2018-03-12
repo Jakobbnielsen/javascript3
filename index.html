@@ -32,27 +32,33 @@ function SetNote(p_note, id) {
     {
       currentMax += 1;
       localStorage.setItem('currentMax', currentMax);
-    noteArrayStringBackToArray.push('<li><a href="#" id="note'+currentMax+'"><span id="spannote'+currentMax+'" onclick="getNote(\'text1\', this)">note '+currentMax+'</span></a></li>');
-     document.getElementById("list").innerHTML += noteArrayStringBackToArray[noteArrayStringBackToArray.length-1];
+    noteArray.push('<li><a href="#" id="note'+currentMax+'"><span id="spannote'+currentMax+'" onclick="getNote(\'text1\', this)">note '+currentMax+'</span></a></li>');
+     document.getElementById("list").innerHTML+= noteArray[noteArray.length-1];
     }
-    var noteArrayString = JSON.stringify(noteArrayStringBackToArray);
+    var noteArrayString = JSON.stringify(noteArray);
     localStorage.setItem("list", noteArrayString);
 
-
+    var noteArrayStringBackToArray = JSON.parse(noteArrayString)
 }
 
+<<<<<<< HEAD
 function getNote(id, obj) {
 <<<<<<< HEAD:index2.html
 =======
   currentId = obj.id
 >>>>>>> parent of 3d8a170... Merge branch 'master' of https://github.com/Jakobbnielsen/javascript3:index.html
+=======
+function getNote(p_note, id, obj) {
+>>>>>>> parent of ff793aa... asd
   var note = localStorage.getItem(obj.id);
   if(note !=null) {
     document.getElementById(id).value=note;
   } else {
     document.getElementById(id).value="noten er tom";
   }
+currentId = obj.id
 }
+<<<<<<< HEAD
 var noteArrayString = localStorage.getItem("list");
   var noteArrayStringBackToArray = JSON.parse(noteArrayString);
   for (var i = 0; i < noteArrayStringBackToArray.length; i++);
@@ -60,6 +66,8 @@ var noteArrayString = localStorage.getItem("list");
     document.getElementById("list").innerHTML += noteArrayStringBackToArray[i];
   }
 
+=======
+>>>>>>> parent of ff793aa... asd
 
 var currentMax = Number(localStorage.getItem('currentMax'));
 if (currentMax==null)
@@ -70,7 +78,11 @@ if (currentMax==null)
 
 var currentId;
 
-
+var noteArray = [];
+for (var i = 0; i < noteArray.length; i++)
+{
+  document.getElementById("list").innerHTML+= noteArray[noteArray.length-1];
+}
 
 
 </script>
